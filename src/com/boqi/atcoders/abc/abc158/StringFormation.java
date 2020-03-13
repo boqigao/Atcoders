@@ -1,6 +1,8 @@
 package com.boqi.atcoders.abc.abc158;
 
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Scanner;
 
 /**
@@ -13,8 +15,11 @@ public class StringFormation {
     public static void main(String[] args) {
         String s = sc.next();
         int numOfOper = sc.nextInt();
-        StringBuilder sb = new StringBuilder();
-        sb.append(s);
+        Deque<Character> dq = new ArrayDeque<>();
+
+        for(int i = 0; i < s.length(); i++) {
+            dq.addLast(s.charAt(i));
+        }
 
         //此处定义一个逆序flag
         boolean rev = false;
@@ -32,17 +37,19 @@ public class StringFormation {
                 // 在头部添加的情况：本身在头部添加，或者是到转后在尾部添加
                 // 他这样写的原因是因为本身rev他定义的是false
                 if((f == 1 && !rev) || (f == 2 && rev)){
-                    sb.insert(0, c);
+                    dq.addFirst(c);
                 }else {
-                    sb.append(c);
+                    dq.addLast(c);
                 }
 
             }
         }
 
-        if (rev){
-            sb.reverse();
+        StringBuilder sb = new StringBuilder();
+
+        while (!dq.isEmpty()){
+            sb.append(dq.pollFirst());
         }
-        System.out.println(sb);
+        System.out.println(rev==false?sb:sb.reverse());
     }
 }
