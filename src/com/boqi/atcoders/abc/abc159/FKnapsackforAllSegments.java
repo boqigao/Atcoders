@@ -1,5 +1,7 @@
 package com.boqi.atcoders.abc.abc159;
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 import java.util.Scanner;
 
 public class FKnapsackforAllSegments {
@@ -23,6 +25,7 @@ public class FKnapsackforAllSegments {
     }
 
     public static int lr(int l, int r, int[] a, int[] x){
-
+        /* Todo */
+        return 0;
     }
 }
