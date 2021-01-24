@@ -1,8 +1,6 @@
 package com.boqi.atcoders.abc.abc159;
 
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Vector;
 
 /**
  * H <= 10
@@ -17,8 +15,8 @@ public class EDividingChocolate {
 
         String[] s = new String[h];
 
-        for(int i = 0; i< h; i++){
-            s[i]= sc.next();
+        for (int i = 0; i < h; i++) {
+            s[i] = sc.next();
         }
         int ans = Integer.MAX_VALUE;
         //一次分割会产生2个组，一共有2^(h-1)种分割方式
@@ -26,7 +24,7 @@ public class EDividingChocolate {
         //他最外层的div，便利的是每一种横向切割的方式
         //1<<(h-1), 1 左移 h-1位，相当于2^(h-1)次方
         //因为要暴力探索h-1位的所有可能性
-        for (int div = 0; div < 1<<(h-1); div++) {
+        for (int div = 0; div < 1 << (h - 1); div++) {
             int group = 0; //定义从上到下切的是第几组
             int[] id = new int[h]; //储存组号id
             for (int i = 0; i < h; i++) {
@@ -72,6 +70,7 @@ public class EDividingChocolate {
         }
         System.out.println(ans);
     }
+
     static boolean add(Integer col, int[] now, int[][] choco, int K) {
         for (int i = 0; i < now.length; i++) now[i] += choco[i][col];
         for (int i = 0; i < now.length; i++) if (now[i] > K) return false;

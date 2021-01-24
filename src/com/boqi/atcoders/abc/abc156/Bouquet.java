@@ -31,9 +31,9 @@ public class Bouquet {
         }
     }
 
-    public static long nCr(int n, int r, int mod){
+    public static long nCr(int n, int r, int mod) {
         long num = 1;
-        for (int i=1; i<=r; i++) {
+        for (int i = 1; i <= r; i++) {
             num *= n;
             num %= mod;
             n--;
@@ -45,12 +45,12 @@ public class Bouquet {
     }
 
     public static long pow(long a, long x, long mod) {
-        return BigInteger.valueOf(a).modPow(BigInteger.valueOf(x),  BigInteger.valueOf(mod)).longValue();
+        return BigInteger.valueOf(a).modPow(BigInteger.valueOf(x), BigInteger.valueOf(mod)).longValue();
     }
 
     public static long factorial(long n, long mod) {
         long result = 1;
-        for (long i=n; i>0; i--) {
+        for (long i = n; i > 0; i--) {
             result *= i;
             result %= mod;
         }

@@ -10,12 +10,12 @@ public class A {
         String t = sc.next();
 
         boolean flag = true;
-        for(int i = 0; i < s.length(); i++){
-            if(s.charAt(i) != t.charAt(i)){
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != t.charAt(i)) {
                 flag = false;
             }
         }
 
-        System.out.println(flag?"Yes":"No");
+        System.out.println(flag ? "Yes" : "No");
     }
 }

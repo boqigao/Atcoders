@@ -11,17 +11,17 @@ public class CFennecVsMonster {
         int k = sc.nextInt();
         long[] h = new long[n];
 
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             h[i] = sc.nextLong();
         }
 
         long res = 0;
-        if(n<=k){
+        if (n <= k) {
             System.out.println(0);
-        }else {
+        } else {
             Arrays.sort(h);
-            for(int i = 0; i < n-k; i++){
-                res+=h[i];
+            for (int i = 0; i < n - k; i++) {
+                res += h[i];
             }
             System.out.println(res);
         }

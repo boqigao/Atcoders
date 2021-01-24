@@ -1,8 +1,6 @@
 package com.boqi.atcoders.abc.abc168;
 
-import com.sun.corba.se.impl.orbutil.graph.Graph;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -10,40 +8,20 @@ import java.util.Scanner;
 
 class Main {
 
-    static Scanner sc = new Scanner(System.in);
-    public static void main(String[] args) {
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        Main g = new Main(false, true, n);
-        for(int i = 1; i <= n; i++){
-            g.addVertex(i);
-        }
-        for (int i = 0; i < m; i++ ){
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            g.addEdge(a-1, b-1, 1);
-        }
-        System.out.println("Yes");
-        g.Dijkstra(0);
-
-    }
     public static final boolean UNDIRECTED_GRAPH = false;//无向图标志
     public static final boolean DIRECTED_GRAPH = true;//有向图标志
-
     public static final boolean ADJACENCY_MATRIX = true;//邻接矩阵实现
     public static final boolean ADJACENCY_LIST = false;//邻接表实现
-
     public static final int MAX_VALUE = Integer.MAX_VALUE;
-    private boolean graphType;
-    private boolean method;
+    static Scanner sc = new Scanner(System.in);
+    private final boolean graphType;
+    private final boolean method;
     private int vertexSize;
-    private int matrixMaxVertex;
-
+    private final int matrixMaxVertex;
     //存储所有顶点信息的一维数组
     private Object[] vertexesArray;
     //存储图中顶点之间关联关系的二维数组,及边的关系
     private int[][] edgesMatrix;
-
     // 记录第i个节点是否被访问过
     private boolean[] visited;
 
@@ -72,11 +50,29 @@ class Main {
         }
     }
 
+    public static void main(String[] args) {
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        Main g = new Main(false, true, n);
+        for (int i = 1; i <= n; i++) {
+            g.addVertex(i);
+        }
+        for (int i = 0; i < m; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            g.addEdge(a - 1, b - 1, 1);
+        }
+        System.out.println("Yes");
+        g.Dijkstra(0);
+
+    }
+
     /********************最短路径****************************/
     //计算一个顶点到其它一个顶点的最短距离
     public void Dijkstra(Object obj) throws Exception {
         Dijkstra(getVertexIndex(obj));
     }
+
     public void Dijkstra(int v0) {
         int[] dist = new int[matrixMaxVertex];
         int[] prev = new int[matrixMaxVertex];
@@ -184,7 +180,7 @@ class Main {
         }
     }
 
-    private int getMin( int row) {
+    private int getMin(int row) {
         int minDist = MAX_VALUE;
         int index = 0;
         for (int j = 0; j < vertexSize; j++) {

@@ -4,17 +4,18 @@ import java.util.Scanner;
 
 public class CVacation {
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         int n = sc.nextInt();
-        int[] a = new int[n+1];
+        int[] a = new int[n + 1];
         a[0] = 0;
-        int[] b = new int[n+1];
+        int[] b = new int[n + 1];
         b[0] = 0;
-        int[] c = new int[n+1];
+        int[] c = new int[n + 1];
         c[0] = 0;
 
 
-        for(int i = 1; i < n+1; i++){
+        for (int i = 1; i < n + 1; i++) {
             a[i] = sc.nextInt();
             b[i] = sc.nextInt();
             c[i] = sc.nextInt();
@@ -40,12 +41,12 @@ public class CVacation {
         //最終的な答えは、最終日の行動がどれでもいいから
         //max(dp[N][A],dp[N][B],dp[N][C])
         //なのだ！
-        for (int i = 1; i < n+1; i++){
+        for (int i = 1; i < n + 1; i++) {
             //当这一天选择为去做A事情的时候，前一天只可能做了b事或者c事情
             //因此只要用a【i】加上前一天的b事情或者c事情就行
-            dp[i][0] = Math.max(a[i] + dp[i-1][1], a[i]+dp[i-1][2]);
-            dp[i][1] = Math.max(b[i] + dp[i-1][0], b[i] +dp[i-1][2]);
-            dp[i][2] = Math.max(c[i] + dp[i-1][0], c[i] +dp[i-1][1]);
+            dp[i][0] = Math.max(a[i] + dp[i - 1][1], a[i] + dp[i - 1][2]);
+            dp[i][1] = Math.max(b[i] + dp[i - 1][0], b[i] + dp[i - 1][2]);
+            dp[i][2] = Math.max(c[i] + dp[i - 1][0], c[i] + dp[i - 1][1]);
         }
 
         System.out.println(Math.max(dp[n][0], Math.max(dp[n][1], dp[n][2])));

@@ -15,17 +15,18 @@ import java.util.Scanner;
  */
 public class E {
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) throws Exception {
         // 节点数
         int n = sc.nextInt();
         // 路径数
         int m = sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++)arr[i]=sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
         List<Integer>[] adj = new ArrayList[n];
 
         for (int i = 0; i < m; i++) {
-            int x = sc.nextInt()-1, y = sc.nextInt()-1;
+            int x = sc.nextInt() - 1, y = sc.nextInt() - 1;
             if (adj[x] == null) {
                 adj[x] = new ArrayList<>();
             }
@@ -39,11 +40,11 @@ public class E {
         int res = Integer.MIN_VALUE;
 
         // 遍历所有节点
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             // 更新结果，取前面节点的最大值和现节点的最大值
-            res = Math.max(res, arr[i]-dp[i]);
-            if (adj[i]==null) continue;
-            for(Integer j : adj[i]) {
+            res = Math.max(res, arr[i] - dp[i]);
+            if (adj[i] == null) continue;
+            for (Integer j : adj[i]) {
                 // 实际上这里是 dp[j] = min(dp[j], dp[i], arr[i])
                 // 这里的意思是
                 // 从 i 城市到了j城市以后
@@ -51,7 +52,7 @@ public class E {
                 // 要么j城市本身的金价最低
                 // 这样就可以理解了
 
-                dp[j] = Math.min(dp[j],dp[i]);
+                dp[j] = Math.min(dp[j], dp[i]);
                 dp[j] = Math.min(dp[j], arr[i]);
             }
 

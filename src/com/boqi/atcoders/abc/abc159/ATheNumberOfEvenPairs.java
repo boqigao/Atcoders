@@ -12,14 +12,15 @@ public class ATheNumberOfEvenPairs {
 
     }
 
-    static int choose (int n, int k){
+    static int choose(int n, int k) {
         int ret = 1;
-        if(n == k) {
+        if (n == k) {
             return 1;
-        }else {
-            for(int i = 0; i < k; i++){
-                ret = ret * (n-i) / (i + 1);
+        } else {
+            for (int i = 0; i < k; i++) {
+                ret = ret * (n - i) / (i + 1);
             }
-        return ret;}
+            return ret;
+        }
     }
 }

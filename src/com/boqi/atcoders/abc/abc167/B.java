@@ -11,12 +11,12 @@ public class B {
         int c = sc.nextInt();
         int k = sc.nextInt();
 
-        if(k <= a){
+        if (k <= a) {
             System.out.println(k);
-        } else if (k <= a + b){
+        } else if (k <= a + b) {
             System.out.println(a);
         } else {
-            System.out.println(a + b * 0 -(k-a-b));
+            System.out.println(a + b * 0 - (k - a - b));
         }
     }
 

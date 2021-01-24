@@ -1,6 +1,5 @@
 package com.boqi.atcoders.edpc;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -32,19 +31,19 @@ public class GLongestPath {
             //对于adj中的每一个节点，他去找后一个节点的最长路径
             //比如 adj[1] 中储存的是1号节点的所有后继节点
             // 则他遍历所有后继节点，找到最长路径，存入memo[1]中
-            ans = Math.max(ans, 1+dp(v));
+            ans = Math.max(ans, 1 + dp(v));
         }
         return memo[u] = ans;
     }
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         int n = sc.nextInt();
         int m = sc.nextInt();
         //邻接矩阵的顶点集合
         adj = new ArrayList[n];
 
         //
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             adj[i] = new ArrayList<>();
         }
 
@@ -59,8 +58,8 @@ public class GLongestPath {
         Arrays.fill(dp, -1);
 
         int ans = 0;
-        for(int i = 0; i < n; i++){
-            if(dp[i] == -1){
+        for (int i = 0; i < n; i++) {
+            if (dp[i] == -1) {
                 ans = Math.max(ans, dp(i));
             }
         }

@@ -17,7 +17,7 @@ public class CountBalls {
             Long A = sc.nextLong();
             Long B = sc.nextLong();
 
-            System.out.println(N/(A+B)*A+Math.min(A, N%(A+B)));
+            System.out.println(N / (A + B) * A + Math.min(A, N % (A + B)));
         }
     }
 }

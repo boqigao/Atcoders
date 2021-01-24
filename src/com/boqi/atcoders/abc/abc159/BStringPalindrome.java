@@ -8,19 +8,18 @@ public class BStringPalindrome {
 
         String s = sc.next();
         int n = s.length();
-        String sub1 = s.substring(0, ((n-1)/2));
-        String sub2 = s.substring(((n+3)/2)-1, n );
+        String sub1 = s.substring(0, ((n - 1) / 2));
+        String sub2 = s.substring(((n + 3) / 2) - 1, n);
 
-        if(isPalindrome(s) && isPalindrome(sub1) && isPalindrome(sub2)){
+        if (isPalindrome(s) && isPalindrome(sub1) && isPalindrome(sub2)) {
             System.out.println("Yes");
-        }else {
+        } else {
             System.out.println("No");
         }
 
     }
 
-    static boolean isPalindrome(String str)
-    {
+    static boolean isPalindrome(String str) {
 
         // Pointers pointing to the beginning
         // and the end of the string

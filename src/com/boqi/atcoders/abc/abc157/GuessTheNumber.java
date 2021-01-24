@@ -11,24 +11,24 @@ public class GuessTheNumber {
         int M = sc.nextInt();
         HashMap<Integer, Character> hm = new HashMap<>();
         StringBuilder sb = new StringBuilder();
-        for (int i=0; i<N; i++){
+        for (int i = 0; i < N; i++) {
             sb.append("0");
         }
-        for (int i = 0; i < M; i++){
+        for (int i = 0; i < M; i++) {
             int s = sc.nextInt();
             String c = sc.next();
 
             char cChar = c.charAt(0);
-            if(hm.containsKey(s-1)){
+            if (hm.containsKey(s - 1)) {
                 System.out.println("-1");
                 return;
-            }else if ((s-1 == 0 && c.equals(0)) ||
-                    ((s-1 == 0 && c.equals(0)) && (s-2 == 0 && c.equals(0)))
-            ){
+            } else if ((s - 1 == 0 && c.equals(0)) ||
+                    ((s - 1 == 0 && c.equals(0)) && (s - 2 == 0 && c.equals(0)))
+            ) {
                 System.out.println("-1");
                 return;
-            }else {
-                sb.setCharAt(s-1, cChar);
+            } else {
+                sb.setCharAt(s - 1, cChar);
             }
         }
         System.out.println(sb);

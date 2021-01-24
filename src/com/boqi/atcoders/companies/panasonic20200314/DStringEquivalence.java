@@ -17,8 +17,8 @@ public class DStringEquivalence {
             return;
         }
 
-        for(char i = 0; i < c + 1; i++) {
-            String str2 = str + String.valueOf((char)('a' + i));
+        for (char i = 0; i < c + 1; i++) {
+            String str2 = str + (char) ('a' + i);
             calc(max, Math.max(c, i + 1), str2);
         }
     }

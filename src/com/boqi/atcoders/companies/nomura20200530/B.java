@@ -8,8 +8,8 @@ public class B {
     public static void main(String[] args) {
         String t = sc.next();
         StringBuilder sb = new StringBuilder(t);
-        for (int i = 0; i < t.length(); i++){
-            if (t.charAt(i) == '?'){
+        for (int i = 0; i < t.length(); i++) {
+            if (t.charAt(i) == '?') {
                 sb.setCharAt(i, 'D');
             }
         }

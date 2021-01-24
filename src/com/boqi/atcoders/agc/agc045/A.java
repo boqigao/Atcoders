@@ -12,25 +12,25 @@ public class A {
         boolean flag1 = false;
         //0人的flag
         boolean flag0 = false;
-        for(int i = 0; i < t; i++){
+        for (int i = 0; i < t; i++) {
             int n = sc.nextInt();
             long[] a = new long[n];
-            for(int j = 0; j < n; j++){
+            for (int j = 0; j < n; j++) {
                 a[j] = sc.nextLong();
             }
             String s = sc.next();
-            for(int j = 0; j < n; j++){
-                int tmpNum = Integer.parseInt(s.charAt(j)+"");
-                if (tmpNum==0){
-                    if(a[j] == 1){
-                        flag0=true;
+            for (int j = 0; j < n; j++) {
+                int tmpNum = Integer.parseInt(s.charAt(j) + "");
+                if (tmpNum == 0) {
+                    if (a[j] == 1) {
+                        flag0 = true;
                     }
                 }
             }
 
-            if(flag0==true){
+            if (flag0 == true) {
                 ans = ans.append("0\n");
-            }else {
+            } else {
                 ans = ans.append("1\n");
             }
 

@@ -11,12 +11,12 @@ public class abc165 {
         int b = sc.nextInt();
 
         boolean flag = false;
-        for(int i = a; i<=b; i++){
-            if(i % k ==0){
+        for (int i = a; i <= b; i++) {
+            if (i % k == 0) {
                 flag = true;
             }
         }
 
-        System.out.println(flag?"OK":"NG");
+        System.out.println(flag ? "OK" : "NG");
     }
 }

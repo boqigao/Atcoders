@@ -1,6 +1,5 @@
 package com.boqi.atcoders.abc.abc163;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class A {
@@ -8,7 +7,7 @@ public class A {
 
     public static void main(String[] args) {
         int r = sc.nextInt();
-        System.out.println(2*r* Math.PI);
+        System.out.println(2 * r * Math.PI);
 
     }
 }

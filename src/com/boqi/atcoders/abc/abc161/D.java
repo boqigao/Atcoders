@@ -1,6 +1,8 @@
 package com.boqi.atcoders.abc.abc161;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 
 class D {
@@ -18,7 +20,7 @@ class D {
         while (i < K) {
             x = queue.poll();
             i++;
-            if (x % 10 != 0)  {
+            if (x % 10 != 0) {
                 v = 10 * x + (x % 10) - 1;
                 queue.add(v);
             }

@@ -27,7 +27,7 @@ public class Digits {
 
         // 如果是10进制，直接输出结束
         if (n == 10) {
-            String a = "" +m;
+            String a = "" + m;
             System.out.println(a.length());
             return;
         }

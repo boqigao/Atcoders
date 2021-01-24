@@ -8,8 +8,8 @@ public class AServalVsMonster {
         int h = sc.nextInt();
         int a = sc.nextInt();
         int i = 0;
-        for ( i = 0; i<=10000; i++){
-            if(a*i>=h){
+        for (i = 0; i <= 10000; i++) {
+            if (a * i >= h) {
                 break;
             }
         }

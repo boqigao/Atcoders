@@ -9,15 +9,15 @@ public class C {
         int n = sc.nextInt();
         int m = sc.nextInt();
         int x = sc.nextInt();
-        int[][] a = new int[n][m+1];
+        int[][] a = new int[n][m + 1];
 
-        for(int i = 0; i < n; i++ ){
-            for(int j = 0; j < m+1; j++ ){
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m + 1; j++) {
                 a[i][j] = sc.nextInt();
             }
         }
 
-        int[][]  dp = new int[15][15];
+        int[][] dp = new int[15][15];
 
 
     }

@@ -12,7 +12,7 @@ public class B {
 
         int[] a = new int[n];
 
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
 
@@ -22,12 +22,12 @@ public class B {
         double line = sum / temp;
 
 
-        for(int i = 0; i < n; i++){
-            if (a[i] >= line){
+        for (int i = 0; i < n; i++) {
+            if (a[i] >= line) {
                 cnt++;
             }
         }
 
-        System.out.println(cnt>=m?"Yes":"No");
+        System.out.println(cnt >= m ? "Yes" : "No");
     }
 }

@@ -1,6 +1,5 @@
 package com.boqi.atcoders.abc.abc161;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class C {
@@ -10,8 +9,8 @@ public class C {
         long n = sc.nextLong();
         long k = sc.nextLong();
 
-        long res =  n % k;
-        long res2 = Math.abs(res-k);
+        long res = n % k;
+        long res2 = Math.abs(res - k);
         System.out.println(Math.min(res, res2));
 
     }

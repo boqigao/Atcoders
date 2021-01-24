@@ -11,9 +11,9 @@ public class B {
         double r = 0.01;
         double n = 1;
         long sum = 0;
-        for(int i = 0; i < 5000; i++){
+        for (int i = 0; i < 5000; i++) {
             sum = (long) (100 * Math.pow(1.01, i));
-            if(sum >= x){
+            if (sum >= x) {
                 ans = i;
                 break;
             }

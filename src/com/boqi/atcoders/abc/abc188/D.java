@@ -1,6 +1,5 @@
 package com.boqi.atcoders.abc.abc188;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -10,6 +9,7 @@ import java.util.TreeMap;
 // 所以需要一个map来保存所有的日期时间
 public class D {
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) throws Exception {
         int n = sc.nextInt();
         int cost = sc.nextInt();
@@ -20,7 +20,7 @@ public class D {
         // event[b] 的时候减少一个
         Map<Integer, Long> events = new TreeMap<>();
 
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             a = sc.nextInt();
             b = sc.nextInt();
             c = sc.nextInt();
@@ -53,7 +53,7 @@ public class D {
         int pre = 0;
 
         // 这里有个知识是map是按照顺序排序的
-        for (Map.Entry<Integer, Long> event: events.entrySet()) {
+        for (Map.Entry<Integer, Long> event : events.entrySet()) {
             // 从第一个a开始，前面全是0
             // 要记住 map的key是日期，value是价格
             total += Math.min(cost, s) * (event.getKey() - pre);
